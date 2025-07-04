@@ -1,0 +1,132 @@
+{
+  "id": "content-creation",
+  "name": "Content Creation",
+  "description": "Generate prompts for blog posts, articles, social media content, etc.",
+  "icon": "file-text",
+  "questions": [
+    {
+      "id": "content-type",
+      "type": "select",
+      "label": "Content Type",
+      "options": [
+        {
+          "value": "blog-post",
+          "label": "Blog Post"
+        },
+        {
+          "value": "article",
+          "label": "Article"
+        },
+        {
+          "value": "social-media",
+          "label": "Social Media Post"
+        },
+        {
+          "value": "email",
+          "label": "Email"
+        },
+        {
+          "value": "product-description",
+          "label": "Product Description"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "target-audience",
+      "type": "text",
+      "label": "Target Audience",
+      "placeholder": "Who is this content for?",
+      "required": true
+    },
+    {
+      "id": "tone",
+      "type": "select",
+      "label": "Tone",
+      "options": [
+        {
+          "value": "formal",
+          "label": "Formal"
+        },
+        {
+          "value": "conversational",
+          "label": "Conversational"
+        },
+        {
+          "value": "humorous",
+          "label": "Humorous"
+        },
+        {
+          "value": "technical",
+          "label": "Technical"
+        },
+        {
+          "value": "persuasive",
+          "label": "Persuasive"
+        },
+        {
+          "value": "inspirational",
+          "label": "Inspirational"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "main-topic",
+      "type": "textarea",
+      "label": "Main Topic",
+      "placeholder": "What is the main topic or subject?",
+      "required": true
+    },
+    {
+      "id": "key-points",
+      "type": "textarea",
+      "label": "Key Points",
+      "placeholder": "List the key points you want to include",
+      "required": false
+    },
+    {
+      "id": "content-length",
+      "type": "select",
+      "label": "Content Length",
+      "options": [
+        {
+          "value": "short",
+          "label": "Short (< 300 words)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (300-800 words)"
+        },
+        {
+          "value": "long",
+          "label": "Long (800-1500 words)"
+        },
+        {
+          "value": "very-long",
+          "label": "Very Long (1500+ words)"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "seo-keywords",
+      "type": "textarea",
+      "label": "SEO Keywords",
+      "placeholder": "List any SEO keywords to include",
+      "required": false
+    },
+    {
+      "id": "additional-instructions",
+      "type": "textarea",
+      "label": "Additional Instructions",
+      "placeholder": "Any other specific instructions",
+      "required": false
+    }
+  ],
+  "prompt_template": "Please write a {content-type} for {target-audience} with a {tone} tone.\n\nTopic: {main-topic}\n\n{key-points}\n\nLength: {content-length}\n\n{seo-keywords}\n\n{additional-instructions}"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "general",
+  "name": "General Purpose",
+  "description": "A general-purpose questionnaire for any type of request",
+  "icon": "help-circle",
+  "questions": [
+    {
+      "id": "main-goal",
+      "type": "textarea",
+      "label": "Main Goal",
+      "placeholder": "What are you trying to accomplish?",
+      "required": true
+    },
+    {
+      "id": "context",
+      "type": "textarea",
+      "label": "Context",
+      "placeholder": "Provide any relevant background information",
+      "required": false
+    },
+    {
+      "id": "specific-requirements",
+      "type": "textarea",
+      "label": "Specific Requirements",
+      "placeholder": "List any specific requirements or constraints",
+      "required": false
+    },
+    {
+      "id": "preferred-format",
+      "type": "text",
+      "label": "Preferred Format",
+      "placeholder": "How would you like the response formatted?",
+      "required": false
+    },
+    {
+      "id": "level-of-detail",
+      "type": "select",
+      "label": "Level of Detail",
+      "options": [
+        {
+          "value": "brief",
+          "label": "Brief"
+        },
+        {
+          "value": "moderate",
+          "label": "Moderate"
+        },
+        {
+          "value": "detailed",
+          "label": "Detailed"
+        },
+        {
+          "value": "comprehensive",
+          "label": "Comprehensive"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "additional-notes",
+      "type": "textarea",
+      "label": "Additional Notes",
+      "placeholder": "Any other information that might be helpful",
+      "required": false
+    }
+  ],
+  "prompt_template": "I need help with the following:\n\nMain Goal: {main-goal}\n\n{context}\n\n{specific-requirements}\n\n{preferred-format}\n\nLevel of Detail: {level-of-detail}\n\n{additional-notes}"
+}

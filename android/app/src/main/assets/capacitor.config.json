@@ -1,0 +1,15 @@
+{
+	"appId": "io.promptforge.app",
+	"appName": "PromptForge",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	},
+	"plugins": {
+		"Camera": {
+			"permissions": [
+				"camera"
+			]
+		}
+	}
+}

@@ -1,0 +1,70 @@
+{
+  "id": "code-generation",
+  "name": "Code Generation",
+  "description": "Generate prompts for code generation, debugging, or refactoring tasks",
+  "icon": "code",
+  "questions": [
+    {
+      "id": "programming-language",
+      "type": "text",
+      "label": "Programming Language",
+      "placeholder": "e.g., Python, JavaScript, Java",
+      "required": true
+    },
+    {
+      "id": "framework",
+      "type": "text",
+      "label": "Framework/Library",
+      "placeholder": "e.g., React, Django, Spring",
+      "required": false
+    },
+    {
+      "id": "task-description",
+      "type": "textarea",
+      "label": "Task Description",
+      "placeholder": "Describe what you want the code to do",
+      "required": true
+    },
+    {
+      "id": "requirements",
+      "type": "textarea",
+      "label": "Requirements",
+      "placeholder": "List any specific requirements or constraints",
+      "required": false
+    },
+    {
+      "id": "input-output",
+      "type": "textarea",
+      "label": "Expected Input/Output",
+      "placeholder": "Describe the expected inputs and outputs",
+      "required": false
+    },
+    {
+      "id": "code-style",
+      "type": "textarea",
+      "label": "Code Style Preferences",
+      "placeholder": "Any specific coding style or patterns you prefer",
+      "required": false
+    },
+    {
+      "id": "include-tests",
+      "type": "checkbox",
+      "label": "Include unit tests",
+      "defaultValue": true
+    },
+    {
+      "id": "include-examples",
+      "type": "checkbox",
+      "label": "Include usage examples",
+      "defaultValue": true
+    },
+    {
+      "id": "additional-context",
+      "type": "textarea",
+      "label": "Additional Context",
+      "placeholder": "Any other information that might be helpful",
+      "required": false
+    }
+  ],
+  "prompt_template": "I need help with {programming-language} code{framework}.\n\nTask: {task-description}\n\n{requirements}\n\n{input-output}\n\n{code-style}\n\n{include-tests}\n{include-examples}\n\n{additional-context}"
+}
